@@ -1,10 +1,10 @@
 import StyledButton from "./Button.styles";
 
-export const LogoutButton = () => {
+export const BackButton = () => {
     return (
 
     <StyledButton>
-        Wyloguj
+        Wstecz
     </StyledButton>
     )
 }

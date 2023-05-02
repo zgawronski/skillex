@@ -1,19 +1,18 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledDepartmentName = styled.span`
-position: absolute;
-width: 253px;
-height: 56px;
-left: 1151px;
-top: 5vh;
+  position: absolute;
+  width: 253px;
+  height: 56px;
+  left: 1151px;
+  top: 5vh;
 
-font-style: normal;
-font-weight: 400;
-font-size: 48px;
-line-height: 56px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: ${({ theme }) => theme.fontSize.xl};
+  line-height: 56px;
 
-color: #2E6DA7;
-`
+  color: #2e6da7;
+`;
 
 export default StyledDepartmentName;
-
