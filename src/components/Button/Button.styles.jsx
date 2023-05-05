@@ -3,7 +3,10 @@ import styled from 'styled-components';
 const StyledButton = styled.button`
   width: 120px;
   height: 30px;
-
+  left: 1400px;
+  top: 10px;
+  position: relative;
+  margin-left: 50px;
   background: #d9d9d9;
   border: 1px solid ${({ theme }) => theme.colors.darkBlue};
   border-radius: 15px;

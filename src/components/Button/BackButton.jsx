@@ -1,10 +1,5 @@
-import StyledButton from "./Button.styles";
+import StyledButton from './Button.styles';
 
 export const BackButton = () => {
-    return (
-
-    <StyledButton>
-        Wstecz
-    </StyledButton>
-    )
-}
+  return <StyledButton className="backButton">Wstecz</StyledButton>;
+};

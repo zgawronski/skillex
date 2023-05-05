@@ -1,0 +1,71 @@
+{
+  "workers": [
+    {
+      "firstname": "Jacek",
+      "lastame": "Placek"
+    },
+    {
+      "firstname": "Jozin",
+      "lastame": "Zbazin"
+    },
+    {
+      "firstname": "Julek",
+      "lastame": "Ogórek"
+    },
+    {
+      "firstname": "Beniek",
+      "lastame": "Maleniek"
+    },
+    {
+      "firstname": "Jan",
+      "lastame": "Nepomucen"
+    },
+    {
+      "firstname": "Helena",
+      "lastame": "Galena"
+    },
+    {
+      "firstname": "Gal",
+      "lastame": "Anonim"
+    },
+    {
+      "firstname": "Sam",
+      "lastame": "Niewiem"
+    }
+  ],
+  "skills": [
+    {
+      "skill": "Agility"
+    },
+    {
+      "skill": "Figma"
+    },
+    {
+      "skill": "React"
+    },
+    {
+      "skill": "Angular"
+    },
+    {
+      "skill": "VScode"
+    },
+    {
+      "skill": "Firefox"
+    },
+    {
+      "skill": "Rzucanie wymoczkami po herbacie"
+    },
+    {
+      "skill": "Pisanie bzdur"
+    },
+    {
+      "skill": "Nie wiem"
+    },
+    {
+      "skill": "Beniek czytaj!"
+    },
+    {
+      "skill": "Albo nie"
+    }
+  ]
+}

@@ -5,7 +5,7 @@ const StyledDepartmentName = styled.span`
   width: 253px;
   height: 56px;
   left: 1151px;
-  top: 5vh;
+  top: 10vh;
 
   font-size: ${({ theme }) => theme.fontSize.xl};
   text-shadow: 0 0.1875em 0.5em rgba(0, 0, 0, 0.3);
