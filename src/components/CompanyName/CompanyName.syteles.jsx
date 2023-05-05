@@ -6,12 +6,8 @@ const StyledName = styled.span`
   height: 70px;
   left: 92px;
   top: 5vh;
-
-  font-style: normal;
-  font-weight: 400;
   font-size: ${({ theme }) => theme.fontSize.xxl};
-  line-height: 70px;
-
+  text-shadow: 0 0.1875em 0.5em rgba(0, 0, 0, 0.3);
   color: #2e6da7;
 `;
 

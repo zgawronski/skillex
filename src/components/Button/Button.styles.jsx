@@ -8,7 +8,7 @@ const StyledButton = styled.button`
   border: 1px solid ${({ theme }) => theme.colors.darkBlue};
   border-radius: 15px;
   cursor: pointer;
-
+  box-shadow: 0 0.1875em 0.5em rgba(0, 0, 0, 0.3);
   font-size: ${({ theme }) => theme.fontSize.s};
 
   color: ${({ theme }) => theme.colors.darkBlue};
