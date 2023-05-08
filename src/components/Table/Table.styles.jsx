@@ -1,35 +1,26 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div``;
-export const SkillFrame = styled.div`
+export const WorkerFrame = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 0px;
 
   position: absolute;
-  width: 1211px;
-  height: 125px;
-  left: 397px;
+  width: 1225px;
+  left: 395px;
   top: 300px;
 `;
 
-export const SkillBox = styled.div`
-  width: 125.24px;
-  height: 120.75px;
-  flex: none;
-  flex-grow: 0;
-  margin: 0px -35px;
-`;
-export const SkillLabel = styled.div`
+export const WorkerLabel = styled.div`
   width: 150px;
   height: 24px;
   padding: 3px;
   padding-left: 5px;
-  left: 0;
-  right: -19.77%;
-  top: 85.6%;
-  bottom: -5.47%;
+  flex: none;
+  flex-grow: 0;
+  margin-left: -35px;
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: bold;
   color: ${({ theme }) => theme.colors.darkBlue};
@@ -38,20 +29,19 @@ export const SkillLabel = styled.div`
   transform: rotate(-43.55deg);
 `;
 
-export const WorkerFrame = styled.div`
+export const SkillFrame = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
   position: absolute;
-  width: 150px;
-  height: 704px;
+  width: 1400px;
+
   left: 200px;
   top: 400px;
 `;
-export const WorkerBox = styled.div``;
 
-export const WorkerLabel = styled.div`
+export const SkillLabel = styled.div`
   width: 150px;
   height: 24px;
   margin-bottom: 10px;
@@ -67,7 +57,7 @@ export const WorkerLabel = styled.div`
 
 export const LevelFrame = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   position: absolute;
   width: 1115px;
@@ -76,11 +66,6 @@ export const LevelFrame = styled.div`
   top: 400px;
 `;
 
-export const LevelBox = styled.div`
-  flex: none;
-  flex-grow: 0;
-  margin: 0 31px 0 0;
-`;
 export const LevelMarker = styled.div`
   width: 24px;
   height: 24px;
@@ -88,7 +73,9 @@ export const LevelMarker = styled.div`
   right: 0%;
   top: 0%;
   bottom: 0%;
-
+  flex: none;
+  flex-grow: 0;
+  margin-bottom: 10px;
   background: ${({ theme }) => theme.colors.formBackground};
   mix-blend-mode: normal;
   border: 1px solid ${({ theme }) => theme.colors.formStroke};
