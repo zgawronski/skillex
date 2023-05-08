@@ -38,13 +38,13 @@ export const Table = () => {
           </WorkerBox>
         ))}
       </WorkerFrame>
-      {skillsArray.map((skillsMarkers, index) => (
-        <LevelFrame key={index}>
+      <LevelFrame>
+        {skillsArray.map((skillsMarkers, index) => (
           <LevelBox tyle={{ order: index }} key={index}>
-            <LevelMarker key={index} />
+            <LevelMarker key={index}></LevelMarker>
           </LevelBox>
-        </LevelFrame>
-      ))}
+        ))}
+      </LevelFrame>
     </Wrapper>
   );
 };

@@ -69,20 +69,21 @@ export const LevelFrame = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  position: relative;
+  position: absolute;
   width: 1115px;
   height: 24px;
+  left: 372px;
+  top: 400px;
 `;
 
 export const LevelBox = styled.div`
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 451px;
-  top: 0px;
+  flex: none;
+  flex-grow: 0;
+  margin: 0 31px 0 0;
 `;
 export const LevelMarker = styled.div`
-  position: absolute;
+  width: 24px;
+  height: 24px;
   left: 0%;
   right: 0%;
   top: 0%;
