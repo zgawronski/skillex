@@ -34,7 +34,9 @@ export const Table = () => {
       <WorkerFrame>
         {workersArray.map((worker, index) => (
           <WorkerBox style={{ order: index }} key={index}>
-            <WorkerLabel key={index}>{Object.values(worker)} </WorkerLabel>
+            <WorkerLabel key={index}>
+              {Object.values(worker.firstname)} {Object.values(worker.lastname)}
+            </WorkerLabel>
           </WorkerBox>
         ))}
       </WorkerFrame>

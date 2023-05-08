@@ -2,35 +2,35 @@
   "workers": [
     {
       "firstname": "Jacek",
-      "lastame": "Placek"
+      "lastname": "Placek"
     },
     {
       "firstname": "Jozin",
-      "lastame": "Zbazin"
+      "lastname": "Zbazin"
     },
     {
       "firstname": "Julek",
-      "lastame": "Ogórek"
+      "lastname": "Ogórek"
     },
     {
       "firstname": "Beniek",
-      "lastame": "Maleniek"
+      "lastname": "Maleniek"
     },
     {
       "firstname": "Jan",
-      "lastame": "Nepomucen"
+      "lastname": "Nepomucen"
     },
     {
       "firstname": "Helena",
-      "lastame": "Galena"
+      "lastname": "Galena"
     },
     {
       "firstname": "Gal",
-      "lastame": "Anonim"
+      "lastname": "Anonim"
     },
     {
       "firstname": "Sam",
-      "lastame": "Niewiem"
+      "lastname": "Niewiem"
     }
   ],
   "skills": [
