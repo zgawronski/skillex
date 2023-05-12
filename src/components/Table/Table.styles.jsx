@@ -6,7 +6,6 @@ export const WorkerFrame = styled.div`
   flex-direction: row;
   align-items: flex-start;
   padding: 0px;
-
   position: absolute;
   width: 1225px;
   left: 395px;
@@ -18,6 +17,7 @@ export const WorkerLabel = styled.div`
   height: 24px;
   padding: 3px;
   padding-left: 5px;
+
   flex: none;
   flex-grow: 0;
   margin-left: -35px;
@@ -57,7 +57,7 @@ export const SkillLabel = styled.div`
 
 export const LevelFrame = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   position: absolute;
   width: 1115px;
@@ -75,7 +75,7 @@ export const LevelMarker = styled.div`
   bottom: 0%;
   flex: none;
   flex-grow: 0;
-  margin-bottom: 10px;
+  margin-right: 10px;
   background: ${({ theme }) => theme.colors.formBackground};
   mix-blend-mode: normal;
   border: 1px solid ${({ theme }) => theme.colors.formStroke};

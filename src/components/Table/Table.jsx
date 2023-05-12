@@ -24,16 +24,16 @@ export const Table = () => {
   return (
     <Wrapper>
       <SkillFrame>
-        {skillsArray.map((skill, index) => (
+        {workersArray.map((worker, index) => (
           <SkillLabel style={{ order: index }} key={index}>
-            {Object.values(skill)}
+            {Object.values(worker.firstname)} {Object.values(worker.lastname)}
           </SkillLabel>
         ))}
       </SkillFrame>
       <WorkerFrame>
-        {workersArray.map((worker, index) => (
+        {skillsArray.map((skill, index) => (
           <WorkerLabel style={{ order: index }} key={index}>
-            {Object.values(worker.firstname)} {Object.values(worker.lastname)}
+            {Object.values(skill)}
           </WorkerLabel>
         ))}
       </WorkerFrame>
