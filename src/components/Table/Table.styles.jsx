@@ -59,8 +59,7 @@ export const LevelFrame = styled.div`
   position: absolute;
   width: 1225px;
   height: 24px;
-  left: 372px;
-  top: 400px;
+  left: 172px;
 `;
 
 export const LevelMarker = styled.div`

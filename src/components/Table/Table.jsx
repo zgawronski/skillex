@@ -25,9 +25,16 @@ export const Table = () => {
     <Wrapper>
       <SkillFrame>
         {workersArray.map((worker, index) => (
-          <SkillLabel style={{ order: index }} key={index}>
-            {Object.values(worker.firstname)} {Object.values(worker.lastname)}
-          </SkillLabel>
+          <>
+            <SkillLabel style={{ order: index }} key={index}>
+              {Object.values(worker.firstname)} {Object.values(worker.lastname)}
+            </SkillLabel>
+            <LevelFrame key={index} style={{ order: index }}>
+              {skillsArray.map((skillsMarkers, index) => (
+                <LevelMarker style={{ order: index }} key={index + 100}></LevelMarker>
+              ))}
+            </LevelFrame>
+          </>
         ))}
       </SkillFrame>
       <WorkerFrame>
@@ -37,11 +44,6 @@ export const Table = () => {
           </WorkerLabel>
         ))}
       </WorkerFrame>
-      <LevelFrame>
-        {skillsArray.map((skillsMarkers, index) => (
-          <LevelMarker style={{ order: index }} key={index}></LevelMarker>
-        ))}
-      </LevelFrame>
     </Wrapper>
   );
 };
