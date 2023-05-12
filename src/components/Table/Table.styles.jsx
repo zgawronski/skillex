@@ -5,10 +5,10 @@ export const WorkerFrame = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 0px;
   position: absolute;
-  width: 1225px;
-  left: 395px;
+  width: 900px;
+  height: auto;
+  left: 460px;
   top: 300px;
 `;
 
@@ -17,10 +17,9 @@ export const WorkerLabel = styled.div`
   height: 24px;
   padding: 3px;
   padding-left: 5px;
-
   flex: none;
   flex-grow: 0;
-  margin-left: -35px;
+  margin-left: -100px;
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: bold;
   color: ${({ theme }) => theme.colors.darkBlue};
@@ -33,10 +32,8 @@ export const SkillFrame = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
   position: absolute;
   width: 1400px;
-
   left: 200px;
   top: 400px;
 `;
@@ -60,7 +57,7 @@ export const LevelFrame = styled.div`
   flex-direction: row;
   align-items: flex-start;
   position: absolute;
-  width: 1115px;
+  width: 1225px;
   height: 24px;
   left: 372px;
   top: 400px;
@@ -75,7 +72,7 @@ export const LevelMarker = styled.div`
   bottom: 0%;
   flex: none;
   flex-grow: 0;
-  margin-right: 10px;
+  margin-right: 26px;
   background: ${({ theme }) => theme.colors.formBackground};
   mix-blend-mode: normal;
   border: 1px solid ${({ theme }) => theme.colors.formStroke};
