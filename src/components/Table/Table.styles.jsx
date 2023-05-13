@@ -33,7 +33,7 @@ export const WorkerFrame = styled.div`
   flex-direction: column;
   align-items: flex-start;
   position: absolute;
-  width: 87.5rem;
+  width: 9.75rem;
   left: 12.5rem;
   top: 25rem;
 `;
@@ -51,13 +51,17 @@ export const WorkerLabel = styled.div`
   background: ${({ theme }) => theme.colors.formBackground};
   border: 1px solid ${({ theme }) => theme.colors.formStroke};
 `;
+export const WorkerSkillWrapper = styled.div`
+  width: 95.75rem;
+  display: flex;
+`;
 
 export const LevelFrame = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   position: absolute;
-  width: 76.5625rem;
+  width: 85rem;
   height: 1.5rem;
   left: 10.75rem;
 `;
@@ -65,10 +69,7 @@ export const LevelFrame = styled.div`
 export const LevelMarker = styled.div`
   width: 1.5rem;
   height: 1.5rem;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
+
   flex: none;
   flex-grow: 0;
   margin-right: 1.625rem;
