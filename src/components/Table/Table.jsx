@@ -33,7 +33,7 @@ export const Table = () => {
     delete x.lastname;
   });
   const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
-  console.log(skillsForArray.shift());
+  console.log(skillsForArray);
 
   return (
     <Wrapper>
@@ -44,8 +44,8 @@ export const Table = () => {
               {Object.values(worker.firstname)} {Object.values(worker.lastname)}
             </WorkerLabel>
             <LevelFrame key={index + 100000} style={{ order: index }}>
-              {skillsArray.map((skillsMarkers, index) => (
-                <LevelMarker style={{ order: index }} name={skillsForArray[index]} key={index + 1000}></LevelMarker>
+              {skillsForArray[index].map((skillsMarkers, index) => (
+                <LevelMarker style={{ order: index }} name={skillsMarkers[index]} key={index + 1000}></LevelMarker>
               ))}
             </LevelFrame>
           </WorkerSkillWrapper>
