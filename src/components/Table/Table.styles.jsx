@@ -73,7 +73,12 @@ export const LevelMarker = styled.div`
   flex: none;
   flex-grow: 0;
   margin-right: 1.625rem;
-  background: ${({ theme }) => theme.colors.formBackground};
+  background-color: ${({ name, theme }) => {
+    if (name == 0) return theme.colors.white;
+    if (name == 1) return theme.colors.formStroke;
+    if (name == 2) return theme.colors.formBackground;
+    if (name == 3) return theme.colors.darkBlue;
+  }};
   mix-blend-mode: normal;
   border: 1px solid ${({ theme }) => theme.colors.formStroke};
   border-radius: 0.9375rem;

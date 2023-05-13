@@ -5,6 +5,7 @@ import { Wrapper, WorkerFrame, WorkerLabel, WorkerSkillWrapper, SkillFrame, Skil
 export const Table = () => {
   const [skills, setSkills] = useState([]);
   const [workers, setWorkers] = useState([]);
+  const [skilledWorkers, setSkilledWorkers] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:3000/workers')
@@ -18,8 +19,21 @@ export const Table = () => {
       .then((data) => setSkills(data));
   }, []);
 
+  useEffect(() => {
+    fetch('http://localhost:3000/skilledWorkers')
+      .then((res) => res.json())
+      .then((data) => setSkilledWorkers(data));
+  }, []);
+
   const skillsArray = skills.map((skill) => skill);
   const workersArray = workers.map((worker) => worker);
+  const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
+  skillWorkersArray.filter((x) => {
+    delete x.firstname;
+    delete x.lastname;
+  });
+  const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
+  console.log(skillsForArray.shift());
 
   return (
     <Wrapper>
@@ -31,7 +45,7 @@ export const Table = () => {
             </WorkerLabel>
             <LevelFrame key={index + 100000} style={{ order: index }}>
               {skillsArray.map((skillsMarkers, index) => (
-                <LevelMarker style={{ order: index }} key={index + 1000}></LevelMarker>
+                <LevelMarker style={{ order: index }} name={skillsForArray[index]} key={index + 1000}></LevelMarker>
               ))}
             </LevelFrame>
           </WorkerSkillWrapper>
