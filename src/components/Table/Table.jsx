@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
-import { Wrapper, SkillFrame, SkillLabel, WorkerFrame, WorkerLabel, LevelFrame, LevelMarker } from './Table.styles';
+import { Wrapper, WorkerFrame, WorkerLabel, SkillFrame, SkillLabel, LevelFrame, LevelMarker } from './Table.styles';
 
 export const Table = () => {
   const [skills, setSkills] = useState([]);
@@ -23,12 +23,12 @@ export const Table = () => {
 
   return (
     <Wrapper>
-      <SkillFrame>
+      <WorkerFrame>
         {workersArray.map((worker, index) => (
           <>
-            <SkillLabel style={{ order: index }} key={index}>
+            <WorkerLabel style={{ order: index }} key={index}>
               {Object.values(worker.firstname)} {Object.values(worker.lastname)}
-            </SkillLabel>
+            </WorkerLabel>
             <LevelFrame key={index} style={{ order: index }}>
               {skillsArray.map((skillsMarkers, index) => (
                 <LevelMarker style={{ order: index }} key={index + 100}></LevelMarker>
@@ -36,14 +36,14 @@ export const Table = () => {
             </LevelFrame>
           </>
         ))}
-      </SkillFrame>
-      <WorkerFrame>
-        {skillsArray.map((skill, index) => (
-          <WorkerLabel style={{ order: index }} key={index}>
-            {Object.values(skill)}
-          </WorkerLabel>
-        ))}
       </WorkerFrame>
+      <SkillFrame>
+        {skillsArray.map((skill, index) => (
+          <SkillLabel style={{ order: index }} key={index}>
+            {Object.values(skill)}
+          </SkillLabel>
+        ))}
+      </SkillFrame>
     </Wrapper>
   );
 };

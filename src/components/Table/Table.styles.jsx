@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div``;
-export const WorkerFrame = styled.div`
+export const SkillFrame = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -12,7 +12,7 @@ export const WorkerFrame = styled.div`
   top: 18.75rem;
 `;
 
-export const WorkerLabel = styled.div`
+export const SkillLabel = styled.div`
   width: 9.375rem;
   height: 1.5rem;
   padding: 0.1875rem;
@@ -28,7 +28,7 @@ export const WorkerLabel = styled.div`
   transform: rotate(-43.55deg);
 `;
 
-export const SkillFrame = styled.div`
+export const WorkerFrame = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -38,7 +38,7 @@ export const SkillFrame = styled.div`
   top: 25rem;
 `;
 
-export const SkillLabel = styled.div`
+export const WorkerLabel = styled.div`
   width: 9.375rem;
   height: 1.5rem;
   margin-bottom: 0.625rem;
