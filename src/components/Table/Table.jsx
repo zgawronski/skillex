@@ -25,21 +25,21 @@ export const Table = () => {
     <Wrapper>
       <WorkerFrame>
         {workersArray.map((worker, index) => (
-          <>
-            <WorkerLabel style={{ order: index }} key={index}>
+          <div key={index}>
+            <WorkerLabel style={{ order: index }} key={index + 100}>
               {Object.values(worker.firstname)} {Object.values(worker.lastname)}
             </WorkerLabel>
-            <LevelFrame key={index} style={{ order: index }}>
+            <LevelFrame key={index + 100000} style={{ order: index }}>
               {skillsArray.map((skillsMarkers, index) => (
-                <LevelMarker style={{ order: index }} key={index + 100}></LevelMarker>
+                <LevelMarker style={{ order: index }} key={index + 1000}></LevelMarker>
               ))}
             </LevelFrame>
-          </>
+          </div>
         ))}
       </WorkerFrame>
       <SkillFrame>
         {skillsArray.map((skill, index) => (
-          <SkillLabel style={{ order: index }} key={index}>
+          <SkillLabel style={{ order: index }} key={index + 10000}>
             {Object.values(skill)}
           </SkillLabel>
         ))}
