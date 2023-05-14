@@ -75,8 +75,8 @@ export const LevelMarker = styled.div`
   margin-right: 1.625rem;
   background-color: ${({ name, theme }) => {
     if (name == 0) return theme.colors.white;
-    if (name == 1) return theme.colors.formStroke;
-    if (name == 2) return theme.colors.formBackground;
+    if (name == 1) return theme.colors.lightBlue;
+    if (name == 2) return theme.colors.blue;
     if (name == 3) return theme.colors.darkBlue;
   }};
   mix-blend-mode: normal;

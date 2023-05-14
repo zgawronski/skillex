@@ -4,14 +4,14 @@ import { Wrapper, WorkerFrame, WorkerLabel, WorkerSkillWrapper, SkillFrame, Skil
 
 export const Table = () => {
   const [skills, setSkills] = useState([]);
-  const [workers, setWorkers] = useState([]);
+  //const [workers, setWorkers] = useState([]);
   const [skilledWorkers, setSkilledWorkers] = useState([]);
 
-  useEffect(() => {
-    fetch('http://localhost:3000/workers')
-      .then((res) => res.json())
-      .then((data) => setWorkers(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch('http://localhost:3000/workers')
+  //     .then((res) => res.json())
+  //     .then((data) => setWorkers(data));
+  // }, []);
 
   useEffect(() => {
     fetch('http://localhost:3000/skills')
@@ -26,26 +26,24 @@ export const Table = () => {
   }, []);
 
   const skillsArray = skills.map((skill) => skill);
-  const workersArray = workers.map((worker) => worker);
+  // const workersArray = workers.map((worker) => worker);
   const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
-  skillWorkersArray.filter((x) => {
-    delete x.firstname;
-    delete x.lastname;
-  });
+  // skillWorkersArray
   const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
   console.log(skillsForArray);
 
   return (
     <Wrapper>
       <WorkerFrame>
-        {workersArray.map((worker, index) => (
+        {skillWorkersArray.map((worker, index) => (
           <WorkerSkillWrapper key={index}>
             <WorkerLabel style={{ order: index }} key={index + 100}>
               {Object.values(worker.firstname)} {Object.values(worker.lastname)}
             </WorkerLabel>
+
             <LevelFrame key={index + 100000} style={{ order: index }}>
-              {skillsForArray[index].map((skillsMarkers, index) => (
-                <LevelMarker style={{ order: index }} name={skillsMarkers[index]} key={index + 1000}></LevelMarker>
+              {skillsForArray[index].slice(2).map((skill, index) => (
+                <LevelMarker style={{ order: index }} name={skill} key={index + 1000}></LevelMarker>
               ))}
             </LevelFrame>
           </WorkerSkillWrapper>
