@@ -3,21 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Wrapper, WorkerFrame, WorkerLabel, WorkerSkillWrapper, SkillFrame, SkillLabel, LevelFrame, LevelMarker } from './Table.styles';
 
 export const Table = () => {
-  const [skills, setSkills] = useState([]);
-  //const [workers, setWorkers] = useState([]);
   const [skilledWorkers, setSkilledWorkers] = useState([]);
-
-  // useEffect(() => {
-  //   fetch('http://localhost:3000/workers')
-  //     .then((res) => res.json())
-  //     .then((data) => setWorkers(data));
-  // }, []);
-
-  useEffect(() => {
-    fetch('http://localhost:3000/skills')
-      .then((res) => res.json())
-      .then((data) => setSkills(data));
-  }, []);
 
   useEffect(() => {
     fetch('http://localhost:3000/skilledWorkers')
@@ -25,12 +11,9 @@ export const Table = () => {
       .then((data) => setSkilledWorkers(data));
   }, []);
 
-  const skillsArray = skills.map((skill) => skill);
-  // const workersArray = workers.map((worker) => worker);
   const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
-  // skillWorkersArray
+  const skillsArray = skillWorkersArray.map((skills) => Object.keys(skills));
   const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
-  console.log(skillsForArray);
 
   return (
     <Wrapper>
@@ -50,9 +33,9 @@ export const Table = () => {
         ))}
       </WorkerFrame>
       <SkillFrame>
-        {skillsArray.map((skill, index) => (
+        {skillsArray[0]?.slice(2).map((skill, index) => (
           <SkillLabel style={{ order: index }} key={index + 10000}>
-            {Object.values(skill)}
+            {skill}
           </SkillLabel>
         ))}
       </SkillFrame>
