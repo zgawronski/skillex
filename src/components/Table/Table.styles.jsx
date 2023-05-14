@@ -16,7 +16,7 @@ export const SkillLabel = styled.div`
   width: 9.375rem;
   height: 1.5rem;
   padding: 0.1875rem;
-  padiing-left: 0.3125rem;
+  padding-left: 0.65rem;
   flex: none;
   flex-grow: 0;
   margin-left: -6.25rem;
@@ -52,7 +52,7 @@ export const WorkerLabel = styled.div`
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: bold;
   color: ${({ theme }) => theme.colors.darkBlue};
-
+  text-align: center;
   background: ${({ theme }) => theme.colors.formBackground};
   border: 1px solid ${({ theme }) => theme.colors.formStroke};
 `;
