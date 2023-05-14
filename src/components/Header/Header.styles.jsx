@@ -35,7 +35,7 @@ export const ButtonsSection = styled.div`
   width: 25%;
   padding-top: 5vh;
   gap: 4rem;
-  justify-content: right;
+  justify-content: center;
   @media ${({ theme }) => theme.breakpoints.mobileOnly && theme.breakpoints.notDesktop} {
     gap: 1rem;
     flex-direction: column;
