@@ -8,7 +8,7 @@ export const SkillFrame = styled.div`
   position: absolute;
   width: 56.25rem;
   height: auto;
-  left: 28.75rem;
+  left: 20.7rem;
   top: 18.75rem;
 `;
 
@@ -34,7 +34,7 @@ export const WorkerFrame = styled.div`
   align-items: flex-start;
   position: absolute;
   width: 9.75rem;
-  left: 12.5rem;
+  left: 4.5rem;
   top: 25rem;
 `;
 
@@ -48,7 +48,6 @@ export const WorkerLabel = styled.div`
   height: 1.5rem;
   margin-bottom: 0.625rem;
   padding: 0.1875rem;
-  padiing-left: 0.3125rem;
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: bold;
   color: ${({ theme }) => theme.colors.darkBlue};

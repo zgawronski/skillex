@@ -23,7 +23,6 @@ export const Table = () => {
             <WorkerLabel style={{ order: index }} key={index + 100}>
               {Object.values(worker.firstname)} {Object.values(worker.lastname)}
             </WorkerLabel>
-
             <LevelFrame key={index + 100000} style={{ order: index }}>
               {skillsForArray[index].slice(2).map((skill, index) => (
                 <LevelMarker style={{ order: index }} name={skill} key={index + 1000}></LevelMarker>
