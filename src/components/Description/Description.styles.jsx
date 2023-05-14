@@ -18,12 +18,10 @@ export const DescriptionText = styled.div`
   margin-top: 1.875rem;
   margin-bottom: 2rem;
   font-size: ${({ theme }) => theme.fontSize.l};
-  color: ${({ theme }) => theme.colors.darkBlue};
 `;
 
 export const SkillLvlContainer = styled.div`
   align-items: center;
-
   display: flex;
   width: 45%;
   margin-left: auto;
@@ -35,8 +33,7 @@ export const SkillLvl = styled.div`
   font-size: ${({ theme }) => theme.fontSize.m};
   color: ${({ name, theme }) => {
     if (name == 0) return theme.colors.white;
-    if (name == 1) return theme.colors.lightBlue;
-    if (name == 2) return theme.colors.blue;
-    if (name == 3) return theme.colors.darkBlue;
+    if (name == 1) return theme.colors.skillLvl1;
+    if (name == 2) return theme.colors.skillLvl2;
   }};
 `;

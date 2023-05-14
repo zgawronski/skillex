@@ -7,9 +7,9 @@ export const theme = {
   colors: {
     white: '#FFFFFF',
     black: '#000000',
-    blue: '#46A4D9',
-    darkBlue: '#2E6DA7',
-    lightBlue: '#88BBBB',
+    skillLvl1: '#88BBBB',
+    skillLvl2: '#46A4D9',
+    skillLvl3: '#2E6DA7',
     gray: '#B7B7B7',
     formBackground: '#F1F1F1',
     formStroke: '#D3D3D3',

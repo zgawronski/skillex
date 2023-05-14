@@ -8,13 +8,12 @@ const StyledButton = styled.button`
   position: relative;
   margin-left: 3.125rem;
   background: #d9d9d9;
-  border: 1px solid ${({ theme }) => theme.colors.darkBlue};
+  border: 1px solid ${({ theme }) => theme.colors.skillLvl3};
   border-radius: 0.9375rem;
   cursor: pointer;
   box-shadow: 0 0.1875rem 0.5rem rgba(0, 0, 0, 0.3);
   font-size: ${({ theme }) => theme.fontSize.s};
-
-  color: ${({ theme }) => theme.colors.darkBlue};
+  color: ${({ theme }) => theme.colors.skillLvl3};
 
   :active {
     transform: translateY(0.25rem);
