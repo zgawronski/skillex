@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { TableWrapper, WorkerFrame, WorkerLabel, WorkerSkillWrapper, SkillFrame, SkillLabel, LevelFrame, LevelMarker } from './Table.styles';
 
+import { SearchBar } from '../SearchBar/SearchBar';
+
 export const Table = () => {
   const [skilledWorkers, setSkilledWorkers] = useState([]);
   const [hasError, setHasError] = useState(false);
@@ -21,6 +23,7 @@ export const Table = () => {
   return (
     <TableWrapper>
       <WorkerFrame>
+        <SearchBar data={skillsForArray} />
         {skillWorkersArray.map((worker, index) => (
           <WorkerSkillWrapper key={index}>
             <WorkerLabel style={{ order: index }} key={index + 100}>
