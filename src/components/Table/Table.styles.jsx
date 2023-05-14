@@ -38,6 +38,11 @@ export const WorkerFrame = styled.div`
   top: 25rem;
 `;
 
+export const WorkerSkillWrapper = styled.div`
+  width: 95.75rem;
+  display: flex;
+`;
+
 export const WorkerLabel = styled.div`
   width: 9.375rem;
   height: 1.5rem;
@@ -50,10 +55,6 @@ export const WorkerLabel = styled.div`
 
   background: ${({ theme }) => theme.colors.formBackground};
   border: 1px solid ${({ theme }) => theme.colors.formStroke};
-`;
-export const WorkerSkillWrapper = styled.div`
-  width: 95.75rem;
-  display: flex;
 `;
 
 export const LevelFrame = styled.div`
