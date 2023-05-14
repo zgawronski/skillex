@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
-import { Wrapper, WorkerFrame, WorkerLabel, WorkerSkillWrapper, SkillFrame, SkillLabel, LevelFrame, LevelMarker } from './Table.styles';
+import { TableWrapper, WorkerFrame, WorkerLabel, WorkerSkillWrapper, SkillFrame, SkillLabel, LevelFrame, LevelMarker } from './Table.styles';
 
 export const Table = () => {
   const [skilledWorkers, setSkilledWorkers] = useState([]);
@@ -16,7 +16,7 @@ export const Table = () => {
   const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
 
   return (
-    <Wrapper>
+    <TableWrapper>
       <WorkerFrame>
         {skillWorkersArray.map((worker, index) => (
           <WorkerSkillWrapper key={index}>
@@ -38,6 +38,6 @@ export const Table = () => {
           </SkillLabel>
         ))}
       </SkillFrame>
-    </Wrapper>
+    </TableWrapper>
   );
 };

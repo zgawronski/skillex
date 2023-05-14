@@ -1,13 +1,9 @@
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  width: 7.5rem;
-  height: 1.875rem;
-  left: 87.5rem;
-  top: 0.625rem;
-  position: relative;
-  margin-left: 3.125rem;
-  background: #d9d9d9;
+  width: 7.5em;
+  height: 1.875em;
+  background: ${({ theme }) => theme.colors.formStroke};
   border: 1px solid ${({ theme }) => theme.colors.skillLvl3};
   border-radius: 0.9375rem;
   cursor: pointer;

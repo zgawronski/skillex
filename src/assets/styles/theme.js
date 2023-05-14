@@ -17,11 +17,13 @@ export const theme = {
 
   // 1rem = 16px)
   fontSize: {
-    xxl: '3.75rem', // 60px
-    xl: '3rem', // 48px
+    xxxl: '3.75rem', // 60px
+    xxl: '3rem', // 48px
+    xl: '2rem', // 32px
     l: '1.5rem', // 24px
     m: '1.25rem', // 20px
-    s: '0.75rem', // 12px
+    s: '1rem', // 16px
+    xs: '0.75rem', // 12px
   },
 
   breakpoints: {

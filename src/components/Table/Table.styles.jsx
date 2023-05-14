@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div``;
+export const TableWrapper = styled.div``;
 export const SkillFrame = styled.div`
   display: flex;
   flex-direction: row;
@@ -20,7 +20,7 @@ export const SkillLabel = styled.div`
   flex: none;
   flex-grow: 0;
   margin-left: -6.25rem;
-  font-size: ${({ theme }) => theme.fontSize.s};
+  font-size: ${({ theme }) => theme.fontSize.xs};
   font-weight: bold;
 
   background: ${({ theme }) => theme.colors.formBackground};
@@ -48,7 +48,7 @@ export const WorkerLabel = styled.div`
   height: 1.5rem;
   margin-bottom: 0.625rem;
   padding: 0.1875rem;
-  font-size: ${({ theme }) => theme.fontSize.s};
+  font-size: ${({ theme }) => theme.fontSize.xs};
   font-weight: bold;
 
   text-align: center;
