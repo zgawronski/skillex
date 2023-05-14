@@ -1,47 +1,44 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
-import { Wrapper, SkillFrame, SkillLabel, WorkerFrame, WorkerLabel, LevelFrame, LevelMarker } from './Table.styles';
+import { Wrapper, WorkerFrame, WorkerLabel, WorkerSkillWrapper, SkillFrame, SkillLabel, LevelFrame, LevelMarker } from './Table.styles';
 
 export const Table = () => {
-  const [skills, setSkills] = useState([]);
-  const [workers, setWorkers] = useState([]);
+  const [skilledWorkers, setSkilledWorkers] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/workers')
+    fetch('http://localhost:3000/skilledWorkers')
       .then((res) => res.json())
-      .then((data) => setWorkers(data));
+      .then((data) => setSkilledWorkers(data));
   }, []);
 
-  useEffect(() => {
-    fetch('http://localhost:3000/skills')
-      .then((res) => res.json())
-      .then((data) => setSkills(data));
-  }, []);
-
-  const skillsArray = skills.map((skill) => skill);
-  const workersArray = workers.map((worker) => worker);
+  const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
+  const skillsArray = skillWorkersArray.map((skills) => Object.keys(skills));
+  const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
 
   return (
     <Wrapper>
+      <WorkerFrame>
+        {skillWorkersArray.map((worker, index) => (
+          <WorkerSkillWrapper key={index}>
+            <WorkerLabel style={{ order: index }} key={index + 100}>
+              {Object.values(worker.firstname)} {Object.values(worker.lastname)}
+            </WorkerLabel>
+
+            <LevelFrame key={index + 100000} style={{ order: index }}>
+              {skillsForArray[index].slice(2).map((skill, index) => (
+                <LevelMarker style={{ order: index }} name={skill} key={index + 1000}></LevelMarker>
+              ))}
+            </LevelFrame>
+          </WorkerSkillWrapper>
+        ))}
+      </WorkerFrame>
       <SkillFrame>
-        {skillsArray.map((skill, index) => (
-          <SkillLabel style={{ order: index }} key={index}>
-            {Object.values(skill)}
+        {skillsArray[0]?.slice(2).map((skill, index) => (
+          <SkillLabel style={{ order: index }} key={index + 10000}>
+            {skill}
           </SkillLabel>
         ))}
       </SkillFrame>
-      <WorkerFrame>
-        {workersArray.map((worker, index) => (
-          <WorkerLabel style={{ order: index }} key={index}>
-            {Object.values(worker.firstname)} {Object.values(worker.lastname)}
-          </WorkerLabel>
-        ))}
-      </WorkerFrame>
-      <LevelFrame>
-        {skillsArray.map((skillsMarkers, index) => (
-          <LevelMarker style={{ order: index }} key={index}></LevelMarker>
-        ))}
-      </LevelFrame>
     </Wrapper>
   );
 };

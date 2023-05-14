@@ -1,23 +1,23 @@
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  width: 120px;
-  height: 30px;
-  left: 1400px;
-  top: 10px;
+  width: 7.5rem;
+  height: 1.875rem;
+  left: 87.5rem;
+  top: 0.625rem;
   position: relative;
-  margin-left: 50px;
+  margin-left: 3.125rem;
   background: #d9d9d9;
   border: 1px solid ${({ theme }) => theme.colors.darkBlue};
-  border-radius: 15px;
+  border-radius: 0.9375rem;
   cursor: pointer;
-  box-shadow: 0 0.1875em 0.5em rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.1875rem 0.5rem rgba(0, 0, 0, 0.3);
   font-size: ${({ theme }) => theme.fontSize.s};
 
   color: ${({ theme }) => theme.colors.darkBlue};
 
   :active {
-    transform: translateY(0.25em);
+    transform: translateY(0.25rem);
     outline: none;
   }
   :focus {
