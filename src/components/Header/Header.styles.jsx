@@ -7,7 +7,6 @@ export const HeaderWrapper = styled.div`
   width: 100vw;
   height: 20vh;
   margin: 0;
-  box-shadow: 0 0.25rem 0 rgba(0, 0, 0, 0.25);
 
   @media ${({ theme }) => theme.breakpoints.mobileOnly && theme.breakpoints.notDesktop} {
     gap: 1rem;
