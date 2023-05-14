@@ -4,13 +4,16 @@ import { TableWrapper, WorkerFrame, WorkerLabel, WorkerSkillWrapper, SkillFrame,
 
 export const Table = () => {
   const [skilledWorkers, setSkilledWorkers] = useState([]);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     fetch('http://localhost:3000/skilledWorkers')
       .then((res) => res.json())
-      .then((data) => setSkilledWorkers(data));
+      .then((data) => setSkilledWorkers(data))
+      .catch(() => setHasError(true));
   }, []);
 
+  console.log(hasError);
   const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
   const skillsArray = skillWorkersArray.map((skills) => Object.keys(skills));
   const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
