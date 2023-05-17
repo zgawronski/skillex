@@ -19,17 +19,6 @@ export const HeaderWrapper = styled.div`
   }
 `;
 
-export const TitleWrapper = styled.div`
-  display: flex;
-  width: 30%;
-  align-items: center;
-  justify-content: center;
-
-  @media ${({ theme }) => theme.breakpoints.mobileOnly && theme.breakpoints.notDesktop} {
-    width: 100%;
-  }
-`;
-
 export const ButtonsSection = styled.div`
   display: flex;
   width: 25%;
