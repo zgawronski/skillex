@@ -5,19 +5,19 @@ export const LoginWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 1em;
-  padding: 5rem;
-  position: absolute;
   width: 17.5rem;
   height: 20.75rem;
-  top: 100%;
-  left: 50%;
-
+  padding: 5rem;
+  margin: 20vh auto 5vh auto;
   background: #f8f8f8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   button {
     position: relative;
     width: 9.375rem;
+  }
+  @media ${({ theme }) => theme.breakpoints.mobileOnly && theme.breakpoints.notDesktop} {
+    top: 0;
   }
 `;
 
@@ -27,7 +27,7 @@ export const LoginInput = styled.input`
   margin-bottom: 0.625rem;
   padding: 0.1875rem;
   font-size: ${({ theme }) => theme.fontSize.s};
-
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
   background: ${({ theme }) => theme.colors.white};
   border: 1px solid ${({ theme }) => theme.colors.formStroke};

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledDepartmentName = styled.span`
+export const StyledDepartmentName = styled.span`
   font-size: ${({ theme }) => theme.fontSize.xxl};
   color: ${({ theme }) => theme.colors.skillLvl3};
 
@@ -8,5 +8,3 @@ const StyledDepartmentName = styled.span`
     font-size: ${({ theme }) => theme.fontSize.xl};
   }
 `;
-
-export default StyledDepartmentName;
