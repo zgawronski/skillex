@@ -1,11 +1,12 @@
-import { LoginWrapper } from './Login.styles';
+import { LoginWrapper, LoginInput } from './Login.styles';
+import { StyledButton } from '../Button/Button.styles';
 
 export const Login = () => {
   return (
     <LoginWrapper>
-      <input placeholder="e-mail" type="text" />
-      <input placeholder="password" type="text" />
-      <button>Login</button>
+      <LoginInput placeholder="E-mail" type="text" />
+      <LoginInput placeholder="Password" type="text" />
+      <StyledButton>Login</StyledButton>
     </LoginWrapper>
   );
 };

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   width: 7.5em;
   height: 1.875em;
   background: ${({ theme }) => theme.colors.skillLvl3};
@@ -17,5 +17,3 @@ const StyledButton = styled.button`
     outline: none;
   }
 `;
-
-export default StyledButton;
