@@ -1,7 +1,9 @@
-import StyledName from "./CompanyName.syteles";
+import { StyledName, TitleWrapper } from './CompanyName.syteles';
 
 export const CompanyName = () => {
-    return(
-        <StyledName>By The Web</StyledName>
-    )
-}
+  return (
+    <TitleWrapper>
+      <StyledName>By The Web</StyledName>;
+    </TitleWrapper>
+  );
+};

@@ -1,4 +1,4 @@
-import { HeaderWrapper, TitleWrapper, ButtonsSection } from './Header.styles';
+import { HeaderWrapper, ButtonsSection } from './Header.styles';
 
 import { CompanyName } from '../CompanyName/CompanyName';
 import { LogoutButton } from '../Button/LogoutButton';
@@ -8,12 +8,8 @@ import { DepartmentName } from '../DepartmentName/DepartmentName';
 export const Header = () => {
   return (
     <HeaderWrapper>
-      <TitleWrapper>
-        <CompanyName />
-      </TitleWrapper>
-      <TitleWrapper>
-        <DepartmentName />
-      </TitleWrapper>
+      <CompanyName />
+      <DepartmentName />
       <ButtonsSection>
         <BackButton />
         <LogoutButton />
