@@ -1,12 +1,10 @@
-import { HeaderWrapper, TitleWrapper } from '../components/Header/Header.styles';
-import { CompanyName } from '../components/CompanyName/CompanyName';
+import { Login } from '../components/Login/Login';
+import { LoginScreenWrapper } from './LoginScreen.styles';
 
 export const LoginScreen = () => {
   return (
-    <HeaderWrapper>
-      <TitleWrapper>
-        <CompanyName />
-      </TitleWrapper>
-    </HeaderWrapper>
+    <LoginScreenWrapper>
+      <Login />
+    </LoginScreenWrapper>
   );
 };
