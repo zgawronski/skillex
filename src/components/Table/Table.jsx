@@ -2,15 +2,20 @@
 import React, { useState, useEffect } from 'react';
 import { TableWrapper, WorkerFrame, WorkerLabel, WorkerSkillWrapper, SkillFrame, SkillLabel, LevelFrame, LevelMarker } from './Table.styles';
 
+import { SearchBar } from '../SearchBar/SearchBar';
+
 export const Table = () => {
   const [skilledWorkers, setSkilledWorkers] = useState([]);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     fetch('http://localhost:3000/skilledWorkers')
       .then((res) => res.json())
-      .then((data) => setSkilledWorkers(data));
+      .then((data) => setSkilledWorkers(data))
+      .catch(() => setHasError(true));
   }, []);
 
+  console.log(hasError);
   const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
   const skillsArray = skillWorkersArray.map((skills) => Object.keys(skills));
   const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
@@ -18,6 +23,7 @@ export const Table = () => {
   return (
     <TableWrapper>
       <WorkerFrame>
+        <SearchBar data={skillsForArray} />
         {skillWorkersArray.map((worker, index) => (
           <WorkerSkillWrapper key={index}>
             <WorkerLabel style={{ order: index }} key={index + 100}>
