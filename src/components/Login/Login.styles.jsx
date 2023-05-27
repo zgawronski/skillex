@@ -12,6 +12,10 @@ export const LoginWrapper = styled.div`
   background: #f8f8f8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+  font-size: ${({ theme }) => theme.fontSize.xs};
+  * {
+    outline: none;
+  }
   button {
     position: relative;
     width: 9.375rem;
@@ -26,9 +30,10 @@ export const LoginInput = styled.input`
   height: 1.5rem;
   margin-bottom: 0.625rem;
   padding: 0.1875rem;
-  font-size: ${({ theme }) => theme.fontSize.xs};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
   background: ${({ theme }) => theme.colors.white};
   border: 1px solid ${({ theme }) => theme.colors.formStroke};
 `;
+
+export const LoginCheckbox = styled.input``;
