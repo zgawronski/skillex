@@ -6,14 +6,14 @@ export const SearchBar = (data) => {
 
   const handleChange = (e) => {
     e.preventDefault();
-    setSearchInput(e.target.value);
+    setSearchInput(e.target.value.toLowerCase());
   };
-
-  if (searchInput.length > 0) {
-    data.filter((searchItem) => {
-      return searchItem.includes(searchInput);
-    });
-  }
   console.log(data);
+  if (searchInput.length > 0) {
+    const x = data;
+    x.filter((searchItem) => searchItem.includes(searchInput));
+    //console.log(searchInput);
+  }
+  // console.log(data);
   return <Input type="text" placeholder="name" onChange={handleChange} value={searchInput} />;
 };
