@@ -8,6 +8,10 @@ export const Table = () => {
   const [searchInput, setSearchInput] = useState('');
   const [skillsFilter, setSkillsFilter] = useState([]);
 
+  const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
+  const skillsArray = skillWorkersArray.map((skills) => Object.keys(skills));
+  const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
+
   const handleChange = (e) => {
     e.preventDefault();
     const searchValue = e.target.value;
@@ -22,12 +26,12 @@ export const Table = () => {
   }, []);
 
   console.log(hasError);
-  const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
-  const skillsArray = skillWorkersArray.map((skills) => Object.keys(skills));
-  const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
 
   useEffect(() => {
-    searchInput !== '' ? setSkillsFilter(skillsForArray.filter((searchItem) => searchItem.includes(searchInput))) : setSkillsFilter(skillsForArray);
+    if (searchInput.length != '') {
+      setSkillsFilter(skillsForArray.filter((searchItem) => searchItem.includes(searchInput)));
+      setSkillsFilter(skillsForArray);
+    }
   }, [searchInput]);
 
   console.log(skillsFilter);
