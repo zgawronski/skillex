@@ -6,12 +6,12 @@ export const Table = () => {
   const [skilledWorkers, setSkilledWorkers] = useState([]);
   const [hasError, setHasError] = useState(false);
   const [searchInput, setSearchInput] = useState('');
-  const [skillsFilter, setSkillsFilter] = useState([]);
 
   const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
   const skillsArray = skillWorkersArray.map((skills) => Object.keys(skills));
   const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
 
+  const [skillsFilter, setSkillsFilter] = useState(skillWorkersArray.map((skills) => Object.values(skills)));
   const handleChange = (e) => {
     e.preventDefault();
     const searchValue = e.target.value;
