@@ -30,6 +30,7 @@ export const Table = () => {
   useEffect(() => {
     if (searchInput.length != '') {
       setSkillsFilter(skillsForArray.filter((searchItem) => searchItem.includes(searchInput)));
+    } else {
       setSkillsFilter(skillsForArray);
     }
   }, [searchInput]);
