@@ -35,7 +35,7 @@ export const Table = () => {
     }
   }, [searchInput]);
 
-  //console.log(skillsFilter);
+  console.log(skillsFilter);
   return (
     <TableWrapper>
       <WorkerFrame>
