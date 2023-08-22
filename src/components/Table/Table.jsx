@@ -11,7 +11,7 @@ export const Table = () => {
   const skillsArray = skillWorkersArray.map((skills) => Object.keys(skills));
   const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
 
-  const [skillsFilter, setSkillsFilter] = useState(skillWorkersArray.map((skills) => Object.values(skills)));
+  const [skillsFilter, setSkillsFilter] = useState([]);
   const handleChange = (e) => {
     e.preventDefault();
     const searchValue = e.target.value;
@@ -28,14 +28,12 @@ export const Table = () => {
   console.log(hasError);
 
   useEffect(() => {
-    if (searchInput.length != '') {
-      setSkillsFilter(skillsForArray.filter((searchItem) => searchItem.includes(searchInput)));
-    } else {
-      setSkillsFilter(skillsForArray);
-    }
+    if (searchInput.length != '')
+      setSkillsFilter(skillsForArray.filter((searchItem) => searchItem.map((e) => e.toLowerCase()).includes(searchInput.toLowerCase())));
+    if (searchInput.length == '') setSkillsFilter(skillsForArray);
   }, [searchInput]);
 
-  //console.log(skillsFilter);
+  console.log(skillsFilter);
   return (
     <TableWrapper>
       <WorkerFrame>
