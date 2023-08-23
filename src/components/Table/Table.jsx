@@ -6,34 +6,37 @@ export const Table = () => {
   const [skilledWorkers, setSkilledWorkers] = useState([]);
   const [hasError, setHasError] = useState(false);
   const [searchInput, setSearchInput] = useState('');
-
-  const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
-  const skillsArray = skillWorkersArray.map((skills) => Object.keys(skills));
-  const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
-
-  const [skillsFilter, setSkillsFilter] = useState([]);
-  const handleChange = (e) => {
-    e.preventDefault();
-    const searchValue = e.target.value;
-    setSearchInput(searchValue);
-  };
-
+  // fetching data
   useEffect(() => {
     fetch('http://localhost:3000/skilledWorkers')
       .then((res) => res.json())
       .then((data) => setSkilledWorkers(data))
       .catch(() => setHasError(true));
   }, []);
+  // console.log(skilledWorkers);
+  const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
+  const skillsArray = skillWorkersArray.map((skills) => Object.keys(skills));
+  const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
+
+  const [skillsFilter, setSkillsFilter] = useState(skillsForArray);
+
+  console.log(skillsFilter);
+
+  // handle search input
+  const handleChange = (e) => {
+    e.preventDefault();
+    const searchValue = e.target.value;
+    setSearchInput(searchValue);
+  };
 
   console.log(hasError);
-
+  // filtering
   useEffect(() => {
     if (searchInput.length != '')
       setSkillsFilter(skillsForArray.filter((searchItem) => searchItem.map((e) => e.toLowerCase()).includes(searchInput.toLowerCase())));
     if (searchInput.length == '') setSkillsFilter(skillsForArray);
   }, [searchInput]);
 
-  console.log(skillsFilter);
   return (
     <TableWrapper>
       <WorkerFrame>

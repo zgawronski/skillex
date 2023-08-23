@@ -32,7 +32,10 @@ export const LoginInput = styled.input`
   padding: 0.1875rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
-  background: ${({ theme }) => theme.colors.white};
+  font-size: ${({ theme }) => theme.fontSize.xs};
+  font-weight: bold;
+  color: ${({ theme }) => theme.colors.skillSenior};
+  background: ${({ theme }) => theme.colors.formBackground};
   border: 1px solid ${({ theme }) => theme.colors.formStroke};
 `;
 

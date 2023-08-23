@@ -75,9 +75,9 @@ export const LevelMarker = styled.div`
   margin-right: 1.625rem;
   background-color: ${({ name, theme }) => {
     if (name == 0) return theme.colors.white;
-    if (name == 1) return theme.colors.skillLvl1;
-    if (name == 2) return theme.colors.skillLvl2;
-    if (name == 3) return theme.colors.skillLvl3;
+    if (name == 1) return theme.colors.skillJunior;
+    if (name == 2) return theme.colors.skillMid;
+    if (name == 3) return theme.colors.skillSenior;
   }};
   mix-blend-mode: normal;
   border: 1px solid ${({ theme }) => theme.colors.formStroke};
@@ -91,7 +91,7 @@ export const Input = styled.input`
   padding: 0.1875rem;
   font-size: ${({ theme }) => theme.fontSize.xs};
   font-weight: bold;
-
+  color: ${({ theme }) => theme.colors.skillSenior};
   text-align: center;
   background: ${({ theme }) => theme.colors.formBackground};
   border: 1px solid ${({ theme }) => theme.colors.formStroke};
