@@ -1,12 +1,12 @@
 import { Header } from '../components/Header/Header';
-import { Table } from '../components/Table/Table';
+import { WorkerTemplate } from '../components/WorkerTemplate/WorkerTemplate';
 import { Description } from '../components/Description/Description';
 
 export const AddingWorker = () => {
   return (
     <div>
       <Header />
-      <Table />
+      <WorkerTemplate />
       <Description />
     </div>
   );
