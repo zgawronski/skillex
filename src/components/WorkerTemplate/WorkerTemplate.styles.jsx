@@ -1,5 +1,15 @@
 import styled from 'styled-components';
 
+export const WorkerDataFrame = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  width: 9.75rem;
+  left: 4.5rem;
+  top: 25rem;
+`;
+
 export const Input = styled.input`
   width: 9.375rem;
   height: 1.5rem;
