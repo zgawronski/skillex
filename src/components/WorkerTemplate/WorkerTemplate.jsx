@@ -1,16 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
-import {
-  TableWrapper,
-  // WorkerFrame,
-  // WorkerLabel,
-  // WorkerSkillWrapper,
-  SkillFrame,
-  SkillLabel,
-  // LevelFrame,
-  // LevelMarker,
-  // Input,
-} from './WorkerTemplate.styles';
+import { TableWrapper, SkillFrame, SkillLabel, WorkerFrame } from '../Table/Table.styles';
+import { Input, SubmitButton } from './WorkerTemplate.styles';
 
 export const WorkerTemplate = () => {
   const [skilledWorkers, setSkilledWorkers] = useState([]);
@@ -23,28 +14,18 @@ export const WorkerTemplate = () => {
       .catch(() => setHasError(true));
   }, []);
 
-  // const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
   const skillsArray = skilledWorkers.map((skills) => Object.keys(skills));
-  // const skillsForArray = skilledWorkers.map((skills) => Object.values(skills));
 
   console.log(hasError);
 
   return (
     <TableWrapper>
-      {/* <WorkerFrame>
-        {skillsForArray.map((worker, index) => (
-          <WorkerSkillWrapper key={index}>
-            <WorkerLabel style={{ order: index }} key={index + 100}>
-              {Object.values(worker[0])} {Object.values(worker[1])}
-            </WorkerLabel>
-            <LevelFrame key={index + 100000} style={{ order: index }}>
-              {skillsForArray[index].slice(2).map((skill, index) => (
-                <LevelMarker style={{ order: index }} name={skill} key={index + 1000}></LevelMarker>
-              ))}
-            </LevelFrame>
-          </WorkerSkillWrapper>
-        ))}
-      </WorkerFrame> */}
+      <WorkerFrame>
+        <Input type="text" name="firstname" key="firstname"></Input>
+        <Input type="text" name="lastname" key="lastname"></Input>
+        <Input type="text" name="departament" key="departament"></Input>
+        <SubmitButton type="submit">Dodaj pracownika</SubmitButton>
+      </WorkerFrame>
       <SkillFrame>
         {skillsArray[0]?.slice(2).map((skill, index) => (
           <SkillLabel style={{ order: index }} key={index + 10000}>
