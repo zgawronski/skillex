@@ -4,5 +4,5 @@ export const Wrapper = styled.div`
   background-color: white;
   width: 100%;
   padding: 0.5rem;
-  color: ${({ theme }) => theme.colors.skillLvl3};
+  color: ${({ theme }) => theme.colors.skillSenior};
 `;

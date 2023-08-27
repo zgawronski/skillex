@@ -1,45 +1,62 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
-import { TableWrapper, WorkerFrame, WorkerLabel, WorkerSkillWrapper, SkillFrame, SkillLabel, LevelFrame, LevelMarker, Input } from './Table.styles';
+import {
+  TableWrapper,
+  WorkerFrame,
+  WorkerLabel,
+  WorkerSkillWrapper,
+  SkillFrame,
+  SkillLabel,
+  LevelFrame,
+  LevelMarker,
+  Input,
+  Magnifier,
+  SearchInput,
+} from './Table.styles';
 
 export const Table = () => {
   const [skilledWorkers, setSkilledWorkers] = useState([]);
   const [hasError, setHasError] = useState(false);
   const [searchInput, setSearchInput] = useState('');
-
-  const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
-  const skillsArray = skillWorkersArray.map((skills) => Object.keys(skills));
-  const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
-
-  const [skillsFilter, setSkillsFilter] = useState(skillWorkersArray.map((skills) => Object.values(skills)));
-  const handleChange = (e) => {
-    e.preventDefault();
-    const searchValue = e.target.value;
-    setSearchInput(searchValue);
-  };
-
+  // fetching data
   useEffect(() => {
     fetch('http://localhost:3000/skilledWorkers')
       .then((res) => res.json())
       .then((data) => setSkilledWorkers(data))
       .catch(() => setHasError(true));
   }, []);
+  // console.log(skilledWorkers);
+  const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
+  const skillsArray = skillWorkersArray.map((skills) => Object.keys(skills));
+  const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
 
-  console.log(hasError);
-
-  useEffect(() => {
-    if (searchInput.length != '') {
-      setSkillsFilter(skillsForArray.filter((searchItem) => searchItem.includes(searchInput)));
-    } else {
-      setSkillsFilter(skillsForArray);
-    }
-  }, [searchInput]);
+  const [skillsFilter, setSkillsFilter] = useState(skillsForArray);
 
   console.log(skillsFilter);
+
+  // handle search input
+  const handleChange = (e) => {
+    e.preventDefault();
+    const searchValue = e.target.value;
+    setSearchInput(searchValue);
+  };
+
+  console.log(hasError);
+  // filtering
+  useEffect(() => {
+    if (searchInput.length != '')
+      setSkillsFilter(skillsForArray.filter((searchItem) => searchItem.map((e) => e.toLowerCase()).includes(searchInput.toLowerCase())));
+    if (searchInput.length == '') setSkillsFilter(skillsForArray);
+  }, [searchInput]);
+
   return (
     <TableWrapper>
       <WorkerFrame>
-        <Input type="text" placeholder="name" onChange={handleChange} value={searchInput} />
+        <SearchInput>
+          <Input type="text" placeholder="name" onChange={handleChange} value={searchInput} />
+
+          <Magnifier src="./img/magnifier.png" alt="magnifier" />
+        </SearchInput>
         {skillsFilter.map((worker, index) => (
           <WorkerSkillWrapper key={index}>
             <WorkerLabel style={{ order: index }} key={index + 100}>

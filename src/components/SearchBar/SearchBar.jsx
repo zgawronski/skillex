@@ -15,5 +15,12 @@ export const SearchBar = (data) => {
     //console.log(searchInput);
   }
   // console.log(data);
-  return <Input type="text" placeholder="name" onChange={handleChange} value={searchInput} />;
+  return (
+    <>
+      <Input type="text" placeholder="name" onChange={handleChange} value={searchInput} />
+      <button type="submit">
+        <img src="./img/magnifier.png" />
+      </button>
+    </>
+  );
 };

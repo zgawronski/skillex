@@ -75,24 +75,34 @@ export const LevelMarker = styled.div`
   margin-right: 1.625rem;
   background-color: ${({ name, theme }) => {
     if (name == 0) return theme.colors.white;
-    if (name == 1) return theme.colors.skillLvl1;
-    if (name == 2) return theme.colors.skillLvl2;
-    if (name == 3) return theme.colors.skillLvl3;
+    if (name == 1) return theme.colors.skillJunior;
+    if (name == 2) return theme.colors.skillMid;
+    if (name == 3) return theme.colors.skillSenior;
   }};
   mix-blend-mode: normal;
   border: 1px solid ${({ theme }) => theme.colors.formStroke};
   border-radius: 0.9375rem;
 `;
-
-export const Input = styled.input`
+export const SearchInput = styled.div`
+  display: flex;
   width: 9.375rem;
   height: 1.5rem;
   margin-bottom: 0.625rem;
   padding: 0.1875rem;
+  border: 1px solid ${({ theme }) => theme.colors.formStroke};
+  background: ${({ theme }) => theme.colors.formBackground};
+`;
+export const Input = styled.input`
+  width: 90%;
   font-size: ${({ theme }) => theme.fontSize.xs};
   font-weight: bold;
-
+  color: ${({ theme }) => theme.colors.skillSenior};
   text-align: center;
-  background: ${({ theme }) => theme.colors.formBackground};
-  border: 1px solid ${({ theme }) => theme.colors.formStroke};
+  border: none;
+`;
+export const Magnifier = styled.img`
+  width: 1rem;
+  height: 1rem;
+  border: none;
+  cursor: pointer;
 `;

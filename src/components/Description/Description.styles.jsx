@@ -33,7 +33,7 @@ export const SkillLvl = styled.div`
   font-size: ${({ theme }) => theme.fontSize.m};
   color: ${({ name, theme }) => {
     if (name == 0) return theme.colors.white;
-    if (name == 1) return theme.colors.skillLvl1;
-    if (name == 2) return theme.colors.skillLvl2;
+    if (name == 1) return theme.colors.skillJunior;
+    if (name == 2) return theme.colors.skillMid;
   }};
 `;
