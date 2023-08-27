@@ -2,13 +2,13 @@
 import React, { useState, useEffect } from 'react';
 import {
   TableWrapper,
-  WorkerFrame,
-  WorkerLabel,
-  WorkerSkillWrapper,
+  // WorkerFrame,
+  // WorkerLabel,
+  // WorkerSkillWrapper,
   SkillFrame,
   SkillLabel,
-  LevelFrame,
-  LevelMarker,
+  // LevelFrame,
+  // LevelMarker,
   // Input,
 } from './WorkerTemplate.styles';
 
@@ -22,16 +22,16 @@ export const WorkerTemplate = () => {
       .then((data) => setSkilledWorkers(data))
       .catch(() => setHasError(true));
   }, []);
-  // console.log(skilledWorkers);
-  const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
-  const skillsArray = skillWorkersArray.map((skills) => Object.keys(skills));
-  const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
+
+  // const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
+  const skillsArray = skilledWorkers.map((skills) => Object.keys(skills));
+  // const skillsForArray = skilledWorkers.map((skills) => Object.values(skills));
 
   console.log(hasError);
 
   return (
     <TableWrapper>
-      <WorkerFrame>
+      {/* <WorkerFrame>
         {skillsForArray.map((worker, index) => (
           <WorkerSkillWrapper key={index}>
             <WorkerLabel style={{ order: index }} key={index + 100}>
@@ -44,7 +44,7 @@ export const WorkerTemplate = () => {
             </LevelFrame>
           </WorkerSkillWrapper>
         ))}
-      </WorkerFrame>
+      </WorkerFrame> */}
       <SkillFrame>
         {skillsArray[0]?.slice(2).map((skill, index) => (
           <SkillLabel style={{ order: index }} key={index + 10000}>

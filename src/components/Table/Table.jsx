@@ -33,9 +33,9 @@ export const Table = () => {
 
   console.log('Error: ' + hasError);
 
-  const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
-  const skillsArray = skillWorkersArray.map((skills) => Object.keys(skills));
-  const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
+  //const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
+  const skillsArray = skilledWorkers.map((skills) => Object.keys(skills));
+  const skillsForArray = skilledWorkers.map((skills) => Object.values(skills));
 
   // handle search input
   const handleChange = (e) => {
@@ -46,7 +46,6 @@ export const Table = () => {
 
   // filtering
   useEffect(() => {
-    setSkillsFilter(skillsForArray);
     if (searchInput.length !== '')
       setSkillsFilter(skillsForArray.filter((searchItem) => searchItem.map((e) => e.toLowerCase()).includes(searchInput.toLowerCase())));
     if (searchInput.length == '') setSkillsFilter(skillsForArray);
@@ -58,7 +57,6 @@ export const Table = () => {
       <WorkerFrame>
         <SearchInput>
           <Input type="text" placeholder="name" onChange={handleChange} value={searchInput} />
-
           <Magnifier src="./img/magnifier.png" alt="magnifier" />
         </SearchInput>
         {loading ? (
