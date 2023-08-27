@@ -30,12 +30,12 @@ export const Table = () => {
       })
       .catch(() => setHasError(true));
   }, []);
-  // console.log(skilledWorkers);
+
+  console.log('Error: ' + hasError);
+
   const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
   const skillsArray = skillWorkersArray.map((skills) => Object.keys(skills));
   const skillsForArray = skillWorkersArray.map((skills) => Object.values(skills));
-
-  // console.log(skillsForArray);
 
   // handle search input
   const handleChange = (e) => {
@@ -44,7 +44,6 @@ export const Table = () => {
     setSearchInput(searchValue);
   };
 
-  console.log('Error: ' + hasError);
   // filtering
   useEffect(() => {
     setSkillsFilter(skillsForArray);
