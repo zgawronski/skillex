@@ -1,6 +1,18 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
-import { TableWrapper, WorkerFrame, WorkerLabel, WorkerSkillWrapper, SkillFrame, SkillLabel, LevelFrame, LevelMarker, Input } from './Table.styles';
+import {
+  TableWrapper,
+  WorkerFrame,
+  WorkerLabel,
+  WorkerSkillWrapper,
+  SkillFrame,
+  SkillLabel,
+  LevelFrame,
+  LevelMarker,
+  Input,
+  Magnifier,
+  SearchInput,
+} from './Table.styles';
 
 export const Table = () => {
   const [skilledWorkers, setSkilledWorkers] = useState([]);
@@ -40,7 +52,11 @@ export const Table = () => {
   return (
     <TableWrapper>
       <WorkerFrame>
-        <Input type="text" placeholder="name" onChange={handleChange} value={searchInput} />
+        <SearchInput>
+          <Input type="text" placeholder="name" onChange={handleChange} value={searchInput} />
+
+          <Magnifier src="./img/magnifier.png" alt="magnifier" />
+        </SearchInput>
         {skillsFilter.map((worker, index) => (
           <WorkerSkillWrapper key={index}>
             <WorkerLabel style={{ order: index }} key={index + 100}>

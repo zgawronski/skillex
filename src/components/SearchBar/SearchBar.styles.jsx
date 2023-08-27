@@ -12,3 +12,6 @@ export const Input = styled.input`
   background: ${({ theme }) => theme.colors.formBackground};
   border: 1px solid ${({ theme }) => theme.colors.formStroke};
 `;
+// export const SearchButton = styled.button`
+
+// `
