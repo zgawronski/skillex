@@ -46,9 +46,14 @@ export const Table = () => {
 
   // filtering
   useEffect(() => {
+    let workersArray = [];
     if (searchInput.length !== '')
-      setSkillsFilter(skillsForArray.filter((searchItem) => searchItem.map((e) => e.toLowerCase()).includes(searchInput.toLowerCase())));
-    if (searchInput.length == '') setSkillsFilter(skillsForArray);
+      workersArray = skillsForArray.filter((searchItem) => searchItem.map((e) => e.toLowerCase()).includes(searchInput.toLowerCase()));
+    if (searchInput.length == '') workersArray = skillsForArray;
+    setSkillsFilter(workersArray);
+    // skills filtering
+    // if (workersArray == skillsForArray)
+    //  skillsArray.filter((searchItem) => searchItem.map((e) => e.toLowerCase()).includes(searchInput.toLowerCase()));
     setLoading(false);
   }, [searchInput]);
 
