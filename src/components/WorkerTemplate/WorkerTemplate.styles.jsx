@@ -41,22 +41,28 @@ export const SubmitButton = styled.button`
   }
 `;
 
+export const Skiller = styled.div`
+  display: grid;
+  height: 12.5rem;
+`;
+
 export const SkillSelection = styled.select`
   width: 1.5rem;
   height: 1.5rem;
   flex: none;
   flex-grow: 0;
   margin-right: 1.625rem;
+  margin-left: -5.625rem;
   mix-blend-mode: normal;
   font-size: ${({ theme }) => theme.fontSize.xs};
   font-weight: bold;
   color: ${({ theme }) => theme.colors.skillSenior};
   border: 1px solid ${({ theme }) => theme.colors.formStroke};
   border-radius: 0.9375rem;
-  background-color: ${({ name, theme }) => {
+  /* background-color: ${({ name, theme }) => {
     if (name == 0) return theme.colors.white;
     if (name == 1) return theme.colors.skillJunior;
     if (name == 2) return theme.colors.skillMid;
     if (name == 3) return theme.colors.skillSenior;
-  }};
+  }}; */
 `;
