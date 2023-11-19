@@ -18,9 +18,7 @@ export const SearchBar = (data) => {
   return (
     <>
       <Input type="text" placeholder="name" onChange={handleChange} value={searchInput} />
-      <button type="submit">
-        <img src="./img/magnifier.png" />
-      </button>
+      <img src="./img/magnifier.png" />
     </>
   );
 };
