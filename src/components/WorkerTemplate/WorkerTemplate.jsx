@@ -34,8 +34,8 @@ export const WorkerTemplate = () => {
   return (
     <TableWrapper>
       <WorkerDataFrame onSubmit={handleSubmit}>
-        <Input type="text" name="firstname" placeholder="Imię" key="firstname" onChange={handleChange}></Input>
-        <Input type="text" name="lastname" placeholder="Nazwisko" key="lastname" onChange={handleChange}></Input>
+        <Input type="text" name="firstname" placeholder="Imię" key="firstname" onChange={handleChange} required></Input>
+        <Input type="text" name="lastname" placeholder="Nazwisko" key="lastname" onChange={handleChange} required></Input>
         <Input type="text" name="departament" placeholder="Oddział" key="departament" onChange={handleChange}></Input>
         <SubmitButton type="submit" key="submit">
           Dodaj pracownika
@@ -47,7 +47,7 @@ export const WorkerTemplate = () => {
             <SkillLabel style={{ order: index }} key={index + 10000 * index}>
               {skill}
             </SkillLabel>
-            <SkillSelection name="skills" style={{ order: index }} key={index + skill}>
+            <SkillSelection name={skill} style={{ order: index }} key={index + skill} onChange={handleChange}>
               <option value="junior" key={index + 'junior'}>
                 Junior
               </option>
