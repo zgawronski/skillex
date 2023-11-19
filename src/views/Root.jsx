@@ -8,7 +8,7 @@ export const Root = () => {
   return (
     <Wrapper>
       <Routes>
-        <Route path="/" element={<Navigate to="/addingworker" />} />
+        <Route path="/" element={<Navigate to="/dashboard" />} />
         <Route path="/login" element={<LoginScreen />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/addingworker" element={<AddingWorker />} />
