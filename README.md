@@ -1,5 +1,3 @@
-# skillex
-
 <h1 align="center">Skillex</h1>
 <p align="center">An application for managing employee skills.</p>
 
