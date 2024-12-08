@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const TableWrapper = styled.div`
-  display: flex;
+  /* display: flex;
   width: 1550px;
   height: 600px;
   margin-left: 20px;
   border-radius: 0.3125rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25); */
 `;
 export const SkillFrame = styled.div`
   display: flex;
