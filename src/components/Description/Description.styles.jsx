@@ -7,7 +7,7 @@ export const DescriptionWrapper = styled.div`
   width: 15rem;
   height: 16.25rem;
   border-radius: 0.3125rem;
-  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
 `;
 
 export const DescriptionText = styled.div`
