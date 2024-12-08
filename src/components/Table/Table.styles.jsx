@@ -6,7 +6,8 @@ export const SkillFrame = styled.div`
   flex-direction: row;
   align-items: flex-start;
   position: absolute;
-  width: 56.25rem;
+  //width: 56.25rem;
+  width: auto;
   height: auto;
   left: 20.7rem;
   top: 18.75rem;
@@ -22,7 +23,9 @@ export const SkillLabel = styled.div`
   margin-left: -6.25rem;
   font-size: ${({ theme }) => theme.fontSize.xs};
   font-weight: bold;
-
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   background: ${({ theme }) => theme.colors.formBackground};
   border: 1px solid ${({ theme }) => theme.colors.formStroke};
   transform: rotate(-43.55deg);
@@ -96,7 +99,7 @@ export const Input = styled.input`
   width: 90%;
   font-size: ${({ theme }) => theme.fontSize.xs};
   font-weight: bold;
-  color: ${({ theme }) => theme.colors.skillSenior};
+  color: ${({ theme }) => theme.colors.commonText};
   text-align: center;
   border: none;
 `;

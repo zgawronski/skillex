@@ -16,7 +16,7 @@ export const Input = styled.input`
   margin-bottom: 0.625rem;
   font-size: ${({ theme }) => theme.fontSize.xs};
   font-weight: bold;
-  color: ${({ theme }) => theme.colors.skillSenior};
+  color: ${({ theme }) => theme.colors.commonText};
   text-align: center;
   border: none;
   background: ${({ theme }) => theme.colors.formBackground};
@@ -26,8 +26,8 @@ export const Input = styled.input`
 export const SubmitButton = styled.button`
   width: 9.375rem;
   height: 1.5rem;
-  background: ${({ theme }) => theme.colors.skillSenior};
-  border: 1px solid ${({ theme }) => theme.colors.skillSenior};
+  background: ${({ theme }) => theme.colors.commonText};
+  border: 1px solid ${({ theme }) => theme.colors.commonText};
   cursor: pointer;
   box-shadow: 0 0.1875rem 0.5rem rgba(0, 0, 0, 0.3);
   font-size: ${({ theme }) => theme.fontSize.xs};
@@ -56,6 +56,6 @@ export const SkillSelection = styled.select`
   mix-blend-mode: normal;
   font-size: ${({ theme }) => theme.fontSize.xs};
   font-weight: bold;
-  color: ${({ theme }) => theme.colors.skillSenior};
+  color: ${({ theme }) => theme.colors.commonText};
   border: 1px solid ${({ theme }) => theme.colors.formStroke};
 `;

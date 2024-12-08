@@ -31,7 +31,7 @@ export const Table = () => {
       .catch(() => setHasError(true));
   }, []);
 
-  console.log('Error: ' + hasError);
+  //console.log('Error: ' + hasError);
 
   //const skillWorkersArray = skilledWorkers.map((skillWorkers) => skillWorkers);
   const skillsArray = skilledWorkers.map((skills) => Object.keys(skills));

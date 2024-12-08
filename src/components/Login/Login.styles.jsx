@@ -34,7 +34,7 @@ export const LoginInput = styled.input`
   text-align: center;
   font-size: ${({ theme }) => theme.fontSize.xs};
   font-weight: bold;
-  color: ${({ theme }) => theme.colors.skillSenior};
+  color: ${({ theme }) => theme.colors.commonText};
   background: ${({ theme }) => theme.colors.formBackground};
   border: 1px solid ${({ theme }) => theme.colors.formStroke};
 `;
